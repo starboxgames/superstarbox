@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0CE4FE58-94F4-483B-A291-75CC30BEEA4A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrainBox</RootNamespace>
+    <AssemblyName>superstarbox</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>player.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sfmlnet-audio-2, Version=2.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2, Version=2.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2, Version=2.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\sfmlnet-window-2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollisionMan.cs" />
+    <Compile Include="Editor.cs" />
+    <Compile Include="Entities\Block.cs" />
+    <Compile Include="Entities\Box.cs" />
+    <Compile Include="Entities\Detonator.cs" />
+    <Compile Include="Entities\Dynamite.cs" />
+    <Compile Include="Entities\Exit.cs" />
+    <Compile Include="Entities\InfoBox.cs" />
+    <Compile Include="Entities\Key.cs" />
+    <Compile Include="Entities\KeyBlock.cs" />
+    <Compile Include="Entities\KeyLock.cs" />
+    <Compile Include="Entities\Star.cs" />
+    <Compile Include="Entities\StarBlock.cs" />
+    <Compile Include="Entities\Wagon.cs" />
+    <Compile Include="Entities\Conveyor.cs" />
+    <Compile Include="Entities\Crane.cs" />
+    <Compile Include="Entities\Ladder.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="EntityFinder.cs" />
+    <Compile Include="Level.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoundMan.cs" />
+    <Compile Include="TextureMan.cs" />
+    <Compile Include="TrainBoxApp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="8bit16.ttf" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EmbeddedResource Include="snd\m1.ogg" />
+    <EmbeddedResource Include="snd\m2.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="csfml-audio-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="csfml-graphics-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="csfml-window-2.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="snd\drop.wav" />
+    <EmbeddedResource Include="snd\explode.wav" />
+    <EmbeddedResource Include="snd\jump.wav" />
+    <EmbeddedResource Include="snd\open.wav" />
+    <EmbeddedResource Include="snd\pickup.wav" />
+    <EmbeddedResource Include="snd\win.wav" />
+    <EmbeddedResource Include="gfx\bg.png" />
+    <EmbeddedResource Include="gfx\block.png" />
+    <EmbeddedResource Include="gfx\box.png" />
+    <EmbeddedResource Include="gfx\conv1.png" />
+    <EmbeddedResource Include="gfx\conv2.png" />
+    <EmbeddedResource Include="gfx\conv3.png" />
+    <EmbeddedResource Include="gfx\crane1.png" />
+    <EmbeddedResource Include="gfx\crane2.png" />
+    <EmbeddedResource Include="gfx\crane3.png" />
+    <EmbeddedResource Include="gfx\detonatorbox.png" />
+    <EmbeddedResource Include="gfx\detonatorhandle.png" />
+    <EmbeddedResource Include="gfx\dynamite.png" />
+    <EmbeddedResource Include="gfx\exit.png" />
+    <EmbeddedResource Include="gfx\exit1.png" />
+    <EmbeddedResource Include="gfx\glueblock.png" />
+    <EmbeddedResource Include="gfx\infobox.png" />
+    <EmbeddedResource Include="gfx\key.png" />
+    <EmbeddedResource Include="gfx\keyblock.png" />
+    <EmbeddedResource Include="gfx\keylock.png" />
+    <EmbeddedResource Include="gfx\ladder1.png" />
+    <EmbeddedResource Include="gfx\ladder2.png" />
+    <EmbeddedResource Include="gfx\player.png" />
+    <EmbeddedResource Include="gfx\playerwalk1.png" />
+    <EmbeddedResource Include="gfx\playerwalk2.png" />
+    <EmbeddedResource Include="gfx\star.png" />
+    <EmbeddedResource Include="gfx\star2.png" />
+    <EmbeddedResource Include="gfx\star3.png" />
+    <EmbeddedResource Include="gfx\starblock.png" />
+    <EmbeddedResource Include="gfx\starblock2.png" />
+    <EmbeddedResource Include="gfx\wagon.png" />
+    <EmbeddedResource Include="gfx\menu\crate.png" />
+    <EmbeddedResource Include="gfx\menu\starbox.png" />
+    <EmbeddedResource Include="gfx\menu\super.png" />
+    <EmbeddedResource Include="libsndfile-1.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="openal32.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="gfx\menu\levelselectbg.png" />
+    <EmbeddedResource Include="gfx\menu\congratulations.png" />
+    <EmbeddedResource Include="gfx\menu\gamewonbg.png" />
+    <EmbeddedResource Include="gfx\menu\gamewontext.png" />
+    <EmbeddedResource Include="lvl\1.xml" />
+    <EmbeddedResource Include="lvl\2.xml" />
+    <EmbeddedResource Include="lvl\3.xml" />
+    <EmbeddedResource Include="lvl\4.xml" />
+    <EmbeddedResource Include="lvl\5.xml" />
+    <EmbeddedResource Include="lvl\tutorial.xml" />
+    <EmbeddedResource Include="lvl\6.xml" />
+    <EmbeddedResource Include="lvl\7.xml" />
+    <Content Include="copying.txt" />
+    <Content Include="player.ico" />
+    <EmbeddedResource Include="sfmlnet-audio-2.dll" />
+    <EmbeddedResource Include="sfmlnet-graphics-2.dll" />
+    <EmbeddedResource Include="sfmlnet-window-2.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
