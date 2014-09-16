@@ -359,7 +359,8 @@ namespace TrainBox
 
                 buffer.Draw(txt);
 
-                txt.DisplayedString = "BETA DEMO 1";
+
+                txt.DisplayedString = "1.1";
                 txt.Position = new Vector2f(2, 111);
                 
                 buffer.Draw(txt);
