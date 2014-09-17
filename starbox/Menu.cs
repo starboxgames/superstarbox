@@ -680,7 +680,8 @@ namespace TrainBox
                     }
                 }
 
-                if ((Keyboard.IsKeyPressed(Keyboard.Key.Return) || Keyboard.IsKeyPressed(Keyboard.Key.Space)) && !keypressTrigger)
+                if ((Keyboard.IsKeyPressed(Keyboard.Key.Return) || Keyboard.IsKeyPressed(Keyboard.Key.Space)) 
+                    && !keypressTrigger)
                 {
                     keypressTrigger = true;
 
