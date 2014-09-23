@@ -1,4 +1,4 @@
-Super Starbox is a puzzle platformer in which you have to manipulate different objects in order to open and reach the exit.
+Super Starbox is a puzzle platformer in which you have to manipulate different objects in order to open and reach the exit. To download it click on the "Releases" tab.
 
 http://youtu.be/EJ2wpf6098w
 
